@@ -72,7 +72,7 @@ resource "databricks_workspace_file" "data_process_function_unit_test" {
 
 resource "databricks_notebook" "data_process_function" {
   source = "./src/data_process_function.ipynb"
-  path   = "/Workspace/Users/huangyue1752@gmail.com/test/data_process_function"
+  path   = "/Workspace/Users/huangyue1752@gmail.com/test/data_process_function.ipynb"
 
 }
 
