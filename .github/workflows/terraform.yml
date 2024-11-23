@@ -33,13 +33,14 @@ jobs:
       - name: Terraform Init
         run: terraform init
 
+      - name: Terraform plan
+        run: |
+          terraform plan 
+
       # Apply the Terraform configuration
       - name: Terraform Apply
         run: |
-          terraform plan -out=tfplan
-
-          # Check the branch or PR target and set the environment
-          terraform apply -input=false -auto-approve -var "environment=dev"
+          terraform apply -auto-approve -var "environment=dev"
 
         env:
           TF_VAR_databricks_token: ${{ secrets.DATABRICKS_TOKEN }}
