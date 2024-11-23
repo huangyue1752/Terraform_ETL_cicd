@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-
+  pull_request:
+    branches:
+      - main       # Trigger when a PR is merged into main (from any branch)
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
