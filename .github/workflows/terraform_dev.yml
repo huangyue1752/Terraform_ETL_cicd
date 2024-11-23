@@ -28,7 +28,12 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y jq curl
-          
+
+      # Install Ruff
+      - name: Install Ruff
+        run: |
+          pip install ruff
+
       # Run Ruff to check for issues in the code
       - name: Run Ruff
         run: |
