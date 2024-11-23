@@ -34,13 +34,11 @@ jobs:
         run: terraform init
 
       - name: Terraform plan
-        run: |
-          terraform plan 
+        run: terraform plan 
 
       # Apply the Terraform configuration
       - name: Terraform Apply
-        run: |
-          terraform apply -auto-approve -var "environment=dev"
+        run: terraform apply -auto-approve -var "environment=dev"
 
         env:
           TF_VAR_databricks_token: ${{ secrets.DATABRICKS_TOKEN }}

@@ -6,4 +6,5 @@ variable "databricks_token" {
 variable "environment" {
   description = "The environment to deploy to (dev, qa, prod)"
   type        = string
+  default     = "dev" 
 }
